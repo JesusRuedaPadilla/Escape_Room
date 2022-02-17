@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ModernaController extends AbstractController
 {
     /**
-     * @Route("//moderna", name="moderna")
+     * @Route("/moderna", name="moderna")
      */
     public function index(): Response
     {
