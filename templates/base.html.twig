@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="escape, room, quest, real, game, life, puzzle, real-life">
+		
+
+        <title>{% block title %}Escapium - Escape Room Game HTML Template{% endblock %}</title>
+
+        {% block stylesheets %}
+		
+			{# Vendors CSS #}
+
+			
+				<link rel="shortcut icon" href={{asset("assets/img/favicons/favicon (3).ico")}}>
+				<link rel="apple-touch-icon" sizes="120x120" href={{asset("assets/img/favicons/favicon-120.png")}}>
+				<link rel="apple-touch-icon" sizes="152x152" href={{asset("assets/img/favicons/favicon-152.png")}}>
+
+				<meta name="viewport" content="width=device-width,initial-scale=1.0">
+				<!-- Google Web Fonts
+	================================================== -->
+				<link href={{asset("https://fonts.googleapis.com/css?family=Anton%7CHind:400,700%7CMontserrat:400,700")}} rel="stylesheet">
+
+				<link href={{asset("assets/vendor/bootstrap/css/bootstrap.css")}} rel="stylesheet">
+				<link href={{asset("assets/vendor/animate/animate.css")}} rel="stylesheet">
+				<link href={{asset("assets/vendor/aos/aos.css")}} rel="stylesheet">
+				<link href={{asset("assets/font-icon/simple-line-icons/css/simple-line-icons.css")}} rel="stylesheet">
+				<link href={{asset("assets/font-icon/ionicons/css/ionicons.min.css")}} rel="stylesheet">
+				<link href={{asset("assets/vendor/magnific-popup/magnific-popup.css")}} rel="stylesheet">
+				<link href={{asset("assets/vendor/slick/slick.css")}} rel="stylesheet">
+
+				
+				<link href={{asset("assets/css/style.css")}} rel="stylesheet">
+				<link href={{asset("assets/css/booked.css")}} rel="stylesheet">
+				
+        {% endblock %}
+    </head>
+
+    <body>
+
+
+        <header id="header" class="header">
+		
+			<!-- Logo - Image Based -->
+			<div class="header__logo header__logo--img">
+				<a href="/index"><img src="assets/img/BB91cd243078ae9e1b5c0332ab9e84449c.png" srcset="assets/img/logo@2x.png 2x" alt="Escapium"></a>
+			</div>
+			<!-- Logo - Image Based / End -->
+		
+			<!-- Main Navigation -->
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="active"><a href="/index">Inicio</a></li>
+				
+					<li class=""><a href="#">Salas</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="room-grid-3cols.html">Salas</a></li>
+							<li class=""><a href="/moderna">Salas -(visualmente moderno)</a></li>
+							<li class=""><a href="/sala/individual">Visualizacion sala individual</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="booking-form.html">Reservas</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="booking-form.html">Form</a></li>
+							<li class=""><a href="booking-login.html">Login</a></li>
+							<li class=""><a href="booking-profile.html">Profile</a></li>
+							<li class=""><a href="booking-appointments.html">Appointments</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="page-about.html">Acerca de</a></li>
+				</ul>
+		
+			</nav>
+			<!-- Main Navigation / End -->
+		
+			<div class="header__spacer"></div>
+		
+			<!-- Secondary Navigation -->
+			<nav class="header__nav header__nav--secondary">
+		
+				<!-- CTA Button / End -->
+		
+				<!-- Secondary Nav -->
+				<ul class="nav-secondary">
+		
+					<!-- Search Form Toggler -->
+					<li class="nav-secondary__search">
+						<div class="search-form-control js-search-form-control">
+							<div class="search-form-toggler"></div>
+							<i class="icon-magnifier search-form-toggler__icon"></i>
+						</div>
+					</li>
+					<!-- Search Form Toggler / End -->
+		
+					<!-- Account -->
+					<li class="nav-secondary__login">
+						<a href="/login">
+							<i class="icon-user"></i>
+							<span class="link-label">Iniciar Sesion</span>
+						</a>
+					</li>
+					<!-- Account / End -->
+		
+				</ul>
+				<!-- Secondary Nav / End -->
+		
+			</nav>
+			<!-- Secondary Navigation / End -->
+		
+			<!-- Mobile Burger Menu Icon -->
+			<a id="header-mobile__toggle" class="burger-menu-icon">
+				<span class="burger-menu-icon__line"></span>
+				<span class="burger-menu-icon__line"></span>
+				<span class="burger-menu-icon__line"></span>
+			</a>
+			<!-- Mobile Burger Menu Icon / End -->
+		
+		</header>
+
+        {% block body %}{% endblock %}
+
+        <footer id="footer" class="footer">
+		
+			<!-- Footer Widget -->
+			<div class="footer-widgets">
+				<div class="container">
+					<div class="row footer-widgets__row footer-widgets__row--is-numbered">
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Address -->
+							<div class="widget widget--footer">
+								<div class="widget__header">
+									<h4 class="widget__title">Our Address</h4>
+								</div>
+								<div class="widget__content">
+									<address>
+										<p>
+											Escape Room Ltd.<br>
+											2390 RoadHill St., Suite 100<br>
+											North Downtown, NY 82153
+										</p>
+		
+										<p>
+											Email: <a href="mailto:info@escapium.com">info@escapium.com</a><br>
+											Tel: +1 800 900 1248
+										</p>
+									</address>
+								</div>
+							</div>
+							<!-- Widget: Address / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Links -->
+							<div class="widget widget--footer widget_nav_menu">
+								<div class="widget__header">
+									<h4 class="widget__title">Useful Links</h4>
+								</div>
+								<div class="widget__content">
+									<ul>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Gallery</a></li>
+										<li><a href="#">Plan an Event</a></li>
+										<li><a href="#">Pricing Packages</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="page-contacts.html">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Links / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Schedule -->
+							<div class="widget widget--footer widget-schedule">
+								<div class="widget__header">
+									<h4 class="widget__title">Cambiarlo por otra cosa</h4>
+								</div>
+								<div class="widget__content">
+									<ul class="schedule schedule-list">
+										<li class="schedule__item">
+											<span class="schedule__title">Monday:</span>
+											<span class="schedule__time">6pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Tuesday:</span>
+											<span class="schedule__time">5pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Wednesday:</span>
+											<span class="schedule__time">Closed</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Thursday:</span>
+											<span class="schedule__time">6pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Friday:</span>
+											<span class="schedule__time">2pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Saturday:</span>
+											<span class="schedule__time">11am - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Sunday</span>
+											<span class="schedule__time">11am - 9pm</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Schedule / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Social Links -->
+							<div class="widget widget--footer widget-social">
+								<div class="widget__header">
+									<h4 class="widget__title">Social Links</h4>
+								</div>
+								<div class="widget__content">
+									<ul class="social-links social-links--circle">
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-facebook-f"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-twitter"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-instagram"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-youtube"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Social Links / End -->
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</footer>
+
+	<!-- Search Form -->
+		<i class="js-search-form-close search-form-close icon-close"></i>
+		<form action="#" class="search-form-overlay">
+			<div class="search-input">
+				<input type="text" name="input-search" class="input-search" placeholder="Enter your search...">
+				<button type="submit" class="submit">
+					<i class="icon-arrow-right"></i>
+				</button>
+			</div>
+		</form>
+		<!-- Search Form / End -->
+		
+
+        {% block javascripts %}
+		
+			{# Vendors JS #}
+				<script src={{asset("assets/vendor/jquery/jquery.min.js")}}></script>
+				<script src={{asset("assets/vendor/jquery/jquery-migrate.min.js")}}></script>
+				<script src={{asset("assets/vendor/bootstrap/js/bootstrap.bundle.min.js")}}></script>
+				<script defer src={{asset("assets/font-icon/font-awesome/js/all.min.js")}}></script>
+				<script src={{asset("//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY")}}></script>
+				<script src={{asset("assets/vendor/gmap3/dist/gmap3.min.js")}}></script>
+
+				<script src={{asset("assets/js/core.js")}}></script>
+				<script src={{asset("assets/js/init.js")}}></script>
+			
+        {% endblock %}
+    </body>
+</html>
