@@ -33,6 +33,7 @@
 				
 				<link href={{asset("assets/css/style.css")}} rel="stylesheet">
 				<link href={{asset("assets/css/booked.css")}} rel="stylesheet">
+				<link href={{asset("assets/css/custom.css")}} rel="stylesheet">
 				
         {% endblock %}
     </head>
@@ -53,22 +54,14 @@
 				<ul class="main-nav__list">
 					<li class="active"><a href="/index">Inicio</a></li>
 				
-					<li class=""><a href="#">Salas</a>
+					<li class=""><a href="/lista-salas">Salas</a>
 						<ul class="main-nav__sub">
-							<li class=""><a href="/lista-salas">Salas</a></li>
 							<li class=""><a href="/moderna">Salas -(visualmente moderno)</a></li>
 							<li class=""><a href="/individual">Visualizacion sala individual</a></li>
 						</ul>
 					</li>
-					<li class=""><a href="booking-form.html">Reservas</a>
-						<ul class="main-nav__sub">
-							<li class=""><a href="booking-form.html">Form</a></li>
-							<li class=""><a href="booking-login.html">Login</a></li>
-							<li class=""><a href="booking-profile.html">Profile</a></li>
-							<li class=""><a href="booking-appointments.html">Appointments</a></li>
-						</ul>
-					</li>
-					<li class=""><a href="page-about.html">Acerca de</a></li>
+					<li class=""><a href="/about">Acerca de</a></li>
+					<li><a href="/contacto">Contáctanos</a></li>
 				</ul>
 		
 			</nav>
@@ -157,12 +150,9 @@
 								</div>
 								<div class="widget__content">
 									<ul>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Gallery</a></li>
-										<li><a href="#">Plan an Event</a></li>
-										<li><a href="#">Pricing Packages</a></li>
-										<li><a href="#">FAQ</a></li>
-										<li><a href="page-contacts.html">Contact</a></li>
+
+										<li><a href="/condiciones">Terminos y condiciones</a></li>
+
 									</ul>
 								</div>
 							</div>
