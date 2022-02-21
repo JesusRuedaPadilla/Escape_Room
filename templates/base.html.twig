@@ -13,9 +13,9 @@
 			{# Vendors CSS #}
 
 			
-				<link rel="shortcut icon" href={{asset("assets/img/favicons/favicon (3).ico")}}>
-				<link rel="apple-touch-icon" sizes="120x120" href={{asset("assets/img/favicons/favicon-120.png")}}>
-				<link rel="apple-touch-icon" sizes="152x152" href={{asset("assets/img/favicons/favicon-152.png")}}>
+				<link rel="shortcut icon" href={{asset("assets/img/favicons/favicon(3).ico")}}>
+				{# <link rel="apple-touch-icon" sizes="120x120" href={{asset("assets/img/favicons/favicon-120.png")}}>
+				<link rel="apple-touch-icon" sizes="152x152" href={{asset("assets/img/favicons/favicon-152.png")}}> #}
 
 				<meta name="viewport" content="width=device-width,initial-scale=1.0">
 				<!-- Google Web Fonts
@@ -40,7 +40,16 @@
 
     <body>
 
+	<div class="site-wrapper">
 
+			<div id="js-preloader-overlay" class="preloader-overlay">
+				<div id="js-preloader" class="preloader"></div>
+			</div>
+
+			<!-- Overlay -->
+			<div class="site-overlay"></div>
+			<!-- Overlay / End -->
+			
         <header id="header" class="header">
 		
 			<!-- Logo - Image Based -->
