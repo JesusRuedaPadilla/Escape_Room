@@ -5,6 +5,11 @@ namespace App\Entity;
 use App\Repository\UsuariosRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * @ORM\Entity(repositoryClass=UsuariosRepository::class)
  */
