@@ -16,6 +16,8 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+
 
 class RegistrationController extends AbstractController
 {
@@ -27,7 +29,7 @@ class RegistrationController extends AbstractController
     }
 
     /**
-     * @Route("/loggin", name="app_register")
+     * @Route("/register", name="app_register")
      */
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppCustomAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
@@ -62,6 +64,12 @@ class RegistrationController extends AbstractController
                 $authenticator,
                 $request
             );
+            if($form->isValid() && $_POST['cierre']){
+
+                header("Location:../index");
+            }
+
+											
         }
 
         return $this->render('registration/register.html.twig', [
@@ -70,7 +78,7 @@ class RegistrationController extends AbstractController
     }
 
     /**
-     * @Route("/verify/email", name="app_verify_email")
+     * @Route("/verify-email", name="app_verify_email")
      */
     public function verifyUserEmail(Request $request): Response
     {
@@ -89,5 +97,18 @@ class RegistrationController extends AbstractController
         $this->addFlash('success', 'Your email address has been verified.');
 
         return $this->redirectToRoute('app_register');
+    }
+
+    /**
+     * @Route("/logout", name="app_logout")
+     */
+
+    public function logout(): void
+    {
+        if($_POST['cierre']){
+
+            header("Location:../index");
+        }
+        // throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }

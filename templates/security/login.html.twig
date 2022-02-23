@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<!-- Page Heading
+		================================================== -->
+		<div class="page-heading jarallax" data-jarallax data-speed="0.2">
+			<div class="page-heading__inner">
+				<div class="container">
+					<h1 class="page-heading__title">Login</h1>
+					<ol class="breadcrumb page-heading__breadcrumb">
+						<li class="breadcrumb-item"><a href="/index">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Login</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- Page Heading / End -->
+		
+		<!-- Content
+		================================================== -->
+		<main class="site-content">
+		
+		<div class="section-content">
+			<div class="container">
+		
+				<div class="row">
+					<div class="col-md-8 ml-md-auto mr-md-auto">
+		
+						<div id="booked-profile-page">
+							<div id="booked-page-form">
+						
+								<ul class="booked-tabs nav login bookedClearFix" id="booked-tabs" role="tablist">
+									<li><a href="#profile-login" id="profile-login-tab" data-toggle="tab" role="tab" aria-selected="true" class="active"><i class="booked-icon ion-locked"></i>Sign In</a></li>
+								</ul>
+						
+								<div class="tab-content">
+						
+									<div id="profile-login" class="booked-tab-content tab-pane fade show active" role="tabpanel" aria-labelledby="profile-login-tab">
+										<div class="booked-form-wrap bookedClearFix">
+                                            <form action="/index" method="post">
+                                                {% if error %}
+                                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                                {% endif %}
+
+                                                {% if app.user %}
+                                                    <div class="mb-3">
+                                                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                                    </div>
+                                                {% endif %}
+
+                                                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                                                <label for="inputEmail">Email</label>
+                                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                                                <label for="inputPassword">Password</label>
+                                                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                                                <input type="hidden" name="_csrf_token"
+                                                    value="{{ csrf_token('authenticate') }}"
+                                                >
+
+                                                {#
+                                                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                                                    See https://symfony.com/doc/current/security/remember_me.html
+
+                                                    <div class="checkbox mb-3">
+                                                        <label>
+                                                            <input type="checkbox" name="_remember_me"> Remember me
+                                                        </label>
+                                                    </div>
+                                                #}
+
+                                                <button class="btn btn-lg btn-primary" type="submit">
+                                                    Sign in
+                                                </button>
+
+                                                <div id="profile-forgot" class="booked-tab-content fade tab-pane" role="tabpanel" aria-labelledby="profile-forgot-tab">
+                                                        <div class="booked-form-wrap bookedClearFix">
+                                                                            <form method="get" action="#" class="wp-user-form">
+                                                                            <div class="form-group">
+                                                                                <input type="text" name="user_login_forgot" class="form-control" value="" size="20" id="user_login_forgot" tabindex="1001" placeholder="What is your email address?">
+                                                                            </div>
+                                                                        <input type="submit" name="user-submit" value="Reset my password" class="user-submit btn btn-lg btn-primary" tabindex="1002">
+                                                                </form>
+                                                        </div>
+                                                </div>
+                                            </form>
+										</div>
+									</div>
+									
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+		
+		
+		</main>
+
+{% endblock %}

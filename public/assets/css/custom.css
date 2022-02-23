@@ -3,3 +3,37 @@
     font-size: 17px;
 }
 
+.btn {
+    color: #fff;
+    background-color: #F60B0E;
+    border-color: #F60B0E;
+  }
+  
+  .btn:hover {
+    color: #fff;
+    background-color: #d3080a;
+    border-color: #c7070a;
+  }
+  
+  .btn:focus, .btn-primary.focus {
+    -webkit-box-shadow: 0 0 0 3px rgba(246, 11, 14, 0.5);
+            box-shadow: 0 0 0 3px rgba(246, 11, 14, 0.5);
+  }
+  
+  .btn.disabled, .btn:disabled {
+    background-color: #F60B0E;
+    border-color: #F60B0E;
+  }
+  
+  .btn:not([disabled]):not(.disabled):active, .btn:not([disabled]):not(.disabled).active,
+  .show > .btn.dropdown-toggle {
+    color: #fff;
+    background-color: #c7070a;
+    border-color: #ba0709;
+    -webkit-box-shadow: 0 0 0 0 rgba(246, 11, 14, 0.5);
+            box-shadow: 0 0 0 0 rgba(246, 11, 14, 0.5);
+  }
+  
+  .link-label-2{
+    font-size: xx-small;
+  }
