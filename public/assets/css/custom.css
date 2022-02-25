@@ -37,3 +37,31 @@
   .link-label-2{
     font-size: xx-small;
   }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+    margin-top: 50px;
+  }
+  
+  #booked-profile-page .booked-tab-content {
+    padding: 50px;
+    border: none;
+    background: #242424;
+    height: 700px;
+  }
+
+  .footer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #1B1B1B;
+    opacity: 0.85;
+  }
