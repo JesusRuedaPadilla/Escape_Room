@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="keywords" content="escape, room, quest, real, game, life, puzzle, real-life">
 		
-
+    
         <title>{% block title %}The Escape Room{% endblock %}</title>
 
         {% block stylesheets %}
@@ -39,7 +39,8 @@
     </head>
 
     <body>
-
+	
+		
 	<div class="site-wrapper">
 
 			<div id="js-preloader-overlay" class="preloader-overlay">
@@ -74,7 +75,8 @@
 			<!-- Main Navigation / End -->
 		{% endblock %}	
 			<div class="header__spacer"></div>
-		
+			<audio src="musica_escape_room.mp3" preload autoplay loop></audio>
+
 			<!-- Secondary Navigation -->
 			<nav class="header__nav header__nav--secondary">
 		
@@ -179,8 +181,28 @@
 									<h4 class="widget__title">Horario de apertura</h4>
 								</div>
 								<div class="widget__content">
-									<ul class="schedule schedule-list">
-										<li class="schedule__item">
+									<table>
+									<tr>
+										{# <td></td>
+										<td></td> #}
+										<td>Lunes</td>
+										<td>Martes</td>
+										<td>Miércoles</td>
+										<td>Jueves</td>
+										<td>Viernes</td>
+									</tr>
+									<tr>
+										<td>6pm-11pm</td>
+										<td>6pm-11pm</td>
+										<td>Cerrado</td>
+										<td>6pm-11pm</td>
+										<td>6pm-11pm</td>
+																			
+									</tr>
+									
+								</table>
+									
+										{# <li class="schedule__item">
 											<span class="schedule__title">Monday:</span>
 											<span class="schedule__time">6pm - 11pm</span>
 										</li>
@@ -207,8 +229,8 @@
 										<li class="schedule__item">
 											<span class="schedule__title">Sunday</span>
 											<span class="schedule__time">11am - 9pm</span>
-										</li>
-									</ul>
+										</li> #}
+									{# </ul> #}
 								</div>
 							</div>
 							<!-- Widget: Schedule / End -->
