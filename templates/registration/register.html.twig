@@ -17,20 +17,21 @@
 
 {% block body %}
 
+
 	<!-- Page Heading
 		================================================== -->
 		<div class="page-heading jarallax" data-jarallax data-speed="0.2">
 			<div class="page-heading__inner">
 				<div class="container">
-					<h1 class="page-heading__title">Login</h1>
+					<h1 class="page-heading__title">Registro</h1>
 					<ol class="breadcrumb page-heading__breadcrumb">
 						<li class="breadcrumb-item"><a href="/index">Inicio</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Login</li>
+						<li class="breadcrumb-item active" aria-current="page">Registro</li>
 					</ol>
 				</div>
 			</div>
 		</div>
-		<!-- Page Heading / End -->
+	<!-- Page Heading / End -->
 		
 		<!-- Content
 		================================================== -->
@@ -60,56 +61,38 @@
 									<div id="profile-register" class="booked-tab-content tab-pane" role="tabpanel" aria-labelledby="profile-login-tab">
 										<div class="booked-form-wrap bookedClearFix">
 											
-                                             {# {% for flash_error in app.flashes('verify_email_error') %}
+                                            {# {# {% for flash_error in app.flashes('verify_email_error') %}
                                                 <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-                                            {% endfor %} 
-
+                                            {% endfor %}
                                             <h1>Register</h1>
 											<label>
  											{{ form_start(registrationForm) }} #}
-{# 											 
-											 {% if error %}
-                                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'register') }}</div>
-                                                {% endif %} #}
-
-												{% if error %}
-                                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'register') }}</div>
-                                                {% endif %}
-												
-                                                {% if app.user %}
-                                                    <div class="mb-3">
-                                                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                                                    </div>
-                                                {% endif %}
-												
+											 
+											 
  												<label for=registrationForm>Nombre</label>
-                                                <input type="text" name="nombre" class="form-control" required autofocus>
+                                                <input type="text" name="" id="" class="form-control" autocomplete="email" required autofocus>
                                                 <label for="inputPassword">Apellidos</label>
-                                                <input type="text" name="apellidos" class="form-control" required>
- 												<label for="inputEmail">Correo</label>
-                                                  <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                                                <input type="text" name="" id="" class="form-control" autocomplete="current-password" required>
+
+ 												<label for=registrationForm>Correo</label>
+                                                <input type="email" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
                                                 <label for="inputPassword">Contraseña</label>
                                                 <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
-												 <input type="hidden" name="_csrf_token"
-                                                    value="{{ csrf_token('authenticate') }}"
-                                                >
+												
 
  												<label for=registrationForm>Fecha_nac</label>
-                                                <input type="date" name="date" class="form-control" required autofocus>
+                                                <input type="date" name="email" id="" class="form-control" autocomplete="email" required autofocus>
                                                 
 													   <button class="btn btn-lg btn-primary" type="submit">
                                                     Register
                                                 </button>
-
-												
 {#                                            
                                                 {{ form_row(registrationForm.email) }}
                                                 {{ form_row(registrationForm.plainPassword, {
                                                     label: 'Password'
                                                 }) }}
                                                 {{ form_row(registrationForm.agreeTerms) }}
-
                                                 <button type="submit" class="btn">Register</button>
                                             {{ form_end(registrationForm) }} #}
 											</label>
@@ -136,5 +119,6 @@
 		
 		
 		</main>
+
 
 {% endblock %}
