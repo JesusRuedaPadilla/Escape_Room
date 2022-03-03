@@ -58,20 +58,23 @@
 			</div>
 			<!-- Logo - Image Based / End -->
 		
+		 {% block a %}
+
+		
 			<!-- Main Navigation -->
-			<nav class="main-nav">
+			{# <nav class="main-nav">
 				<ul class="main-nav__list">
-					<li class="active"><a href="/index">Inicio</a></li>
+					<li class=""><a href="/index">Inicio</a></li>
 				
 					<li class=""><a href="/lista-salas">Salas</a>
 					</li>
 					<li class=""><a href="/about">Acerca de</a></li>
-					<li><a href="/contacto">Contáctanos</a></li>
+					<li class=""><a href="/contacto">Contáctanos</a></li>
 				</ul>
 		
-			</nav>
+			</nav> #}
 			<!-- Main Navigation / End -->
-		
+		{% endblock %}	
 			<div class="header__spacer"></div>
 		
 			<!-- Secondary Navigation -->
@@ -92,6 +95,7 @@
 					<!-- Search Form Toggler / End -->
 		
 					<!-- Account -->
+					
 					<li class="nav-secondary__login">
 						<a href="/login">
 							<i class="icon-user"></i>
@@ -102,12 +106,6 @@
 					<li class="nav-secondary__login">
 						<a href="/register">
 							<span class="link-label">Resgistrate</span>
-						</a>
-					</li>
-
-					<li class="nav-cierre-sesion">
-						<a href="/logout">
-							<span  name='cierre' id='cierre' class="link-label-2">Cerrar Sesion</span>
 						</a>
 					</li>
 					<!-- Account / End -->
@@ -219,8 +217,6 @@
 							<!-- Widget: Schedule / End -->
 						</div>
 						<div class="col-xs-12 col-sm-6 col-lg-3">
-							<!-- Widget: Social Links -->
-							<div class="col-xs-12 col-sm-6 col-lg-3">
 							<!-- Widget: Social Links -->
 							<div class="widget widget--footer widget-social">
 								<div class="widget__header">

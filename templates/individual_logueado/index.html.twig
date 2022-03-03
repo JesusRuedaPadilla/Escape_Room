@@ -1,5 +1,21 @@
 {% extends 'indexUSR.html.twig' %}
 
+{% block b %}
+<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class=""><a href="/usuario-index">Inicio</a></li>
+				
+					<li class=""><a href="/usr-salas">Salas</a>
+					</li>
+					<li class=""><a href="/usr-about">Acerca de</a></li>
+					<li><a href="/usr-contacto">Contáctanos</a></li>
+					<li class=""><a href="/usr-precios">Pricing Tables <span class="badge badge-danger">Novedad</span></a></li>
+				</ul>
+		
+			</nav>
+
+{% endblock %}
+
 {% block body %}
 <div class="room-slider-wrapper">
 			<div class="room-slider js-room-single-slick">
@@ -39,19 +55,19 @@
 											<span class="rating__inner"></span>
 										</div>
 									</div>
-									<div class="room__meta-item-label">Easy</div>
+									<div class="room__meta-item-label">Facil</div>
 								</div>
 								<div class="room__meta-item">
 									<div class="room__meta-item-value">
 										<i class="ion-person-stalker"></i> 2-3
 									</div>
-									<div class="room__meta-item-label">Players</div>
+									<div class="room__meta-item-label">Personas</div>
 								</div>
 								<div class="room__meta-item">
 									<div class="room__meta-item-value">
 										<i class="icon-clock"></i> 60
 									</div>
-									<div class="room__meta-item-label">Minutes</div>
+									<div class="room__meta-item-label">Minutos</div>
 								</div>
 							</div>
 							<!-- Meta / End -->
@@ -68,7 +84,7 @@
 							<ul class="room-details">
 								<li class="room-details__item">
 									<i class="fas fa-phone"></i>
-										+1 800 900 1248
+										+34 800 900 124
 								</li>
 								<li class="room-details__item">
 									<i class="fas fa-envelope"></i>
@@ -76,7 +92,7 @@
 								</li>
 								<li class="room-details__item">
 									<i class="fab fa-instagram"></i>
-									<a href="https://www.instagram.com">escapium</a>
+									<a href="https://www.instagram.com">The Escape room</a>
 								</li>
 								<li class="room-details__item">
 									<i class="fas fa-map-marker-alt"></i>
@@ -85,7 +101,7 @@
 							</ul>
 							<!-- Room Details / End -->
 		
-							<a href="#" class="btn btn-primary btn-lg">Book Now!</a>
+							<a href="#" class="btn btn-primary btn-lg">¡Reserva ahora!</a>
 		
 						</div>
 					</div>
@@ -102,7 +118,7 @@
 		
 				<!-- Section Title - Centered -->
 				<div class="section-heading section-heading--divider-top">
-					<h2 class="section-heading__title">Booking Form</h2>
+					<h2 class="section-heading__title">Formulario de reserva</h2>
 				</div>
 				<!-- Section Title - Centered / End -->
 		
@@ -114,14 +130,14 @@
 							<div class="booked-calendarSwitcher calendar">
 								<p><i class="booked-icon booked-icon-calendar"></i>
 									<select name="booked_calendar_chooser_62251" id="booked_calendar_chooser_62251" class="booked_calendar_chooser">
-										<option value="0">Default Calendar</option>
-										<option class="level-0" value="2">Room #1</option>
-										<option class="level-0" value="3">Room #2</option>
+										<option value="0">Calendario</option>
+										<option class="level-0" value="2">Sala #1</option>
+										<option class="level-0" value="3">Sala #2</option>
 									</select>
 								</p>
 							</div>
-							<div class="booked-calendar-wrap large" data-default="2017-08-01">
-								<table class="booked-calendar" data-calendar-date="2017-08-01">
+							<div class="booked-calendar-wrap large" data-default="2022-03-01">
+								<table class="booked-calendar" data-calendar-date="2022-03-31">
 									<thead>
 										<tr>
 											<th colspan="7">
@@ -129,65 +145,65 @@
 												<span class="calendarSavingState">
 													<i class="booked-icon booked-icon-spinner-clock booked-icon-spin"></i>
 												</span>
-												<span class="monthName">August 2017</span>
+												<span class="monthName">Marzo 2022</span>
 												<a href="#" data-goto="2017-09-01" class="page-right"><i class="booked-icon booked-icon-arrow-right"></i></a>
 											</th>
 										</tr>
 										<tr class="days">
-											<th>Mon</th>
-											<th>Tue</th>
-											<th>Wed</th>
-											<th>Thu</th>
-											<th>Fri</th>
-											<th>Sat</th>
-											<th>Sun</th>
+											<th>L</th>
+											<th>M</th>
+											<th>X</th>
+											<th>J</th>
+											<th>V</th>
+											<th>S</th>
+											<th>D</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr class="week">
-											<td data-date="2017-07-31" class="prev-month prev-date">
+											<td data-date="2022-02-31" class="prev-month prev-date">
 												<span class="date">
-													<span class="number">31</span>
+													<span class="number">28</span>
 												</span>
 											</td>
-											<td data-date="2017-08-1" class="prev-date">
+											<td data-date="2017-08-1" class="active">
 												<span class="date">
 													<span class="number">1</span>
 												</span>
 											</td>
-											<td data-date="2017-08-2" class="prev-date">
+											<td data-date="2017-08-2">
 												<span class="date">
 													<span class="number">2</span>
 												</span>
 											</td>
-											<td data-date="2017-08-3" class="prev-date">
+											<td data-date="2017-08-3">
 												<span class="date">
 													<span class="number">3</span>
 												</span>
 											</td>
-											<td data-date="2017-08-4" class="prev-date">
+											<td data-date="2017-08-4">
 												<span class="date">
 													<span class="number">4</span>
 												</span>
 											</td>
-											<td data-date="2017-08-5" class="prev-date">
+											<td data-date="2017-08-5">
 												<span class="date">
 													<span class="number">5</span>
 												</span>
 											</td>
-											<td data-date="2017-08-6" class="prev-date">
+											<td data-date="2017-08-6">
 												<span class="date">
 													<span class="number">6</span>
 												</span>
 											</td>
 										</tr>
 										<tr class="week">
-											<td data-date="2017-08-7" class="today prev-date">
+											<td data-date="2017-08-7" class="booked">
 												<span class="date">
 													<span class="number">7</span>
 												</span>
 											</td>
-											<td data-date="2017-08-8" class="active">
+											<td data-date="2017-08-8">
 												<span class="date">
 													<span class="number">8</span>
 												</span>
@@ -324,7 +340,7 @@
 													<span class="number">21</span>
 												</span>
 											</td>
-											<td data-date="2017-08-22" class="booked">
+											<td data-date="2017-08-22">
 												<span class="date tooltipster tooltipstered">
 													<span class="number">22</span>
 												</span>
@@ -408,7 +424,7 @@
 		<div class="section-content">
 			<div class="container">
 		
-				<h2>Other Rooms</h2>
+				<h2>Otras salas</h2>
 		
 				<!-- Rooms Grid - 3 cols -->
 				<div class="row rooms rooms--grid js-rooms-related slick--arrows-top">

@@ -1,5 +1,21 @@
 {% extends 'indexUSR.html.twig' %}
 
+{% block b %}
+<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class=""><a href="/usuario-index">Inicio</a></li>
+				
+					<li class=""><a href="/usr-salas">Salas</a>
+					</li>
+					<li class=""><a href="/usr-about">Acerca de</a></li>
+					<li class="active"><a href="/usr-contacto">Contáctanos</a></li>
+					<li class=""><a href="/usr-precios">Pricing Tables <span class="badge badge-danger">Novedad</span></a></li>
+				</ul>
+		
+			</nav>
+
+{% endblock %}
+
 
 {% block body %}
 	<!-- Page Heading
@@ -27,8 +43,8 @@
 				<div class="row">
 					<div class="col-md-3">
 		
-						<h2>Get in Touch</h2>
-						<p>If you are interested in working with us, please get in touch</p>
+						<h2>Ponte en contacto con nosotros</h2>
+						<p>Si está interesado en trabajar con nosotros, póngase en contacto con nosotros</p>
 		
 						<ul class="contact-info list-unstyled">
 							<li class="contact-info__item">
@@ -37,7 +53,7 @@
 								</span>
 								<div class="contact-info__txt">
 									2390 RoadHill St., Suite 100<br>
-									North Downtown, NY 82153
+									 NY 82153
 								</div>
 							</li>
 							<li class="contact-info__item">
@@ -45,7 +61,7 @@
 									<i class="icon-phone"></i>
 								</span>
 								<div class="contact-info__txt">
-									+1800 900 1248
+									+34 200 900 124
 								</div>
 							</li>
 							<li class="contact-info__item">
@@ -53,35 +69,35 @@
 									<i class="icon-envelope"></i>
 								</span>
 								<div class="contact-info__txt">
-									<a href="mailto:info@escapium.com">info@escapium.com</a>
+									<a href="mailto:info@thescaperoom.com">info@thescaperoom.com</a>
 								</div>
 							</li>
 						</ul>
 		
 					</div>
 					<div class="col-md-8 offset-md-1">
-						<h2>Contact Form</h2>
+						<h2>Formulario de contacto</h2>
 						<!-- Contact Form -->
 						<form action="#" id="contact-form">
 		
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group form-group--lg">
-										<input type="text" class="form-control" id="contact-name" placeholder="Name">
+										<input type="text" class="form-control" id="contact-name" placeholder="Nombre">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group form-group--lg">
-										<input type="email" class="form-control" id="contact-email" placeholder="Email Address">
+										<input type="email" class="form-control" id="contact-email" placeholder="Direccion de correo electronico">
 									</div>
 								</div>
 							</div>
 		
 							<div class="form-group form-group--lg">
-								<textarea id="contact-message" class="form-control" rows="8" placeholder="Your Message..."></textarea>
+								<textarea id="contact-message" class="form-control" rows="8" placeholder="Escribe aqui tu mensaje...."></textarea>
 							</div>
 		
-							<input type="button" class="btn btn-primary btn-lg btn-block" value="Send Message">
+							<input type="button" class="btn btn-primary btn-lg btn-block" value="Enviar mensaje">
 						</form>
 						<!-- Contact Form / End -->
 					</div>

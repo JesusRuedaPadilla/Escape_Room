@@ -1,5 +1,21 @@
 {% extends 'indexUSR.html.twig' %}
 
+{% block b %}
+<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class=""><a href="/usuario-index">Inicio</a></li>
+				
+					<li class="active"><a href="/usr-salas">Salas</a>
+					</li>
+					<li class=""><a href="/usr-about">Acerca de</a></li>
+					<li><a href="/usr-contacto">Contáctanos</a></li>
+					<li class=""><a href="/usr-precios">Pricing Tables <span class="badge badge-danger">Novedad</span></a></li>
+				</ul>
+		
+			</nav>
+
+{% endblock %}
+
 {% block body %}
 <!-- Page Heading
 		================================================== -->
@@ -26,10 +42,10 @@
 		
 				<!-- Filter -->
 				<ul class="filter js-filter list-unstyled">
-					<li class="filter__item"><button class="filter__link btn btn-primary" data-filter="*">All</button></li>
-					<li class="filter__item"><button class="filter__link btn btn-outline-secondary" data-filter=".room--category-easy">Easy</button></li>
-					<li class="filter__item"><button class="filter__link btn btn-outline-secondary" data-filter=".room--category-normal">Normal</button></li>
-					<li class="filter__item"><button class="filter__link btn btn-outline-secondary" data-filter=".room--category-hard">Hard</button></li>
+					<li class="filter__item"><button class=" btn btn-secondary" data-filter="*">All</button></li>
+					<li class="filter__item"><button class="btn btn-secondary" data-filter=".room--category-easy">Easy</button></li>
+					<li class="filter__item"><button class="btn btn-secondary" data-filter=".room--category-normal">Normal</button></li>
+					<li class="filter__item"><button class="btn btn-secondary" data-filter=".room--category-hard">Hard</button></li>
 				</ul>
 				<!-- Filter / End -->
 		

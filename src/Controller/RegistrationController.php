@@ -31,12 +31,21 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register", name="app_register")
      */
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppCustomAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppCustomAuthenticator $authenticator, EntityManagerInterface $entityManager,AuthenticationUtils $authenticationUtils): Response
     {
+    
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
+             // get the login error if there is one
+             $error = $authenticationUtils->getLastAuthenticationError();
+             // last username entered by the user
+             $lastUsername = $authenticationUtils->getLastUsername();
+     
+             return $this->render('registration/register.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+         
+             
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
             $user->setPassword(
@@ -76,7 +85,6 @@ class RegistrationController extends AbstractController
             'registrationForm' => $form->createView(),
         ]);
     }
-
     /**
      * @Route("/verify-email", name="app_verify_email")
      */

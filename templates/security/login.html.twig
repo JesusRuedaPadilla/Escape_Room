@@ -1,6 +1,20 @@
 {% extends 'base.html.twig' %}
 
 
+{% block a %}
+ 		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class=""><a href="/index">Inicio</a></li>
+				
+				<li class=""><a href="/lista-salas">Salas</a>
+				</li>
+					<li class=""><a href="/about">Acerca de</a></li>
+				<li class=""><a href="/contacto">Contáctanos</a></li>
+			</ul>
+		
+		</nav>
+{% endblock %}	
+
 {% block body %}
 
 	<!-- Page Heading

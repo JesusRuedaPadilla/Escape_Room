@@ -1,6 +1,22 @@
 {% extends 'indexUSR.html.twig' %}
 
 
+{% block b %}
+<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class=""><a href="/usuario-index">Inicio</a></li>
+				
+					<li class=""><a href="/usr-salas">Salas</a>
+					</li>
+					<li class=""><a href="/usr-about">Acerca de</a></li>
+					<li><a href="/usr-contacto">Contáctanos</a></li>
+					<li class="active"><a href="/usr-precios">Tabla de precios <span class="badge badge-danger">Novedad</span></a></li>
+				</ul>
+		
+			</nav>
+
+{% endblock %}
+
 {% block body %}
 
 		<!-- Page Heading

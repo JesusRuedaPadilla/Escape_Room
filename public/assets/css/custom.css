@@ -102,4 +102,9 @@
   .animated.infinite {
     animation-iteration-count: infinite;
   }
-  
+
+  .btn-secondary {
+    color: #fff;
+    background-color: #404040;
+    border-color: #404040;
+}

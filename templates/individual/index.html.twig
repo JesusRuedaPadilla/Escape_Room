@@ -1,5 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block a %}
+ 		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class=""><a href="/index">Inicio</a></li>
+				
+				<li class=""><a href="/lista-salas">Salas</a>
+				</li>
+					<li class=""><a href="/about">Acerca de</a></li>
+				<li class=""><a href="/contacto">Contáctanos</a></li>
+			</ul>
+		
+		</nav>
+{% endblock %}	
+
 {% block body %}
 <div class="room-slider-wrapper">
 			<div class="room-slider js-room-single-slick">
@@ -39,19 +53,19 @@
 											<span class="rating__inner"></span>
 										</div>
 									</div>
-									<div class="room__meta-item-label">Easy</div>
+									<div class="room__meta-item-label">Facil</div>
 								</div>
 								<div class="room__meta-item">
 									<div class="room__meta-item-value">
 										<i class="ion-person-stalker"></i> 2-3
 									</div>
-									<div class="room__meta-item-label">Players</div>
+									<div class="room__meta-item-label">Personas</div>
 								</div>
 								<div class="room__meta-item">
 									<div class="room__meta-item-value">
 										<i class="icon-clock"></i> 60
 									</div>
-									<div class="room__meta-item-label">Minutes</div>
+									<div class="room__meta-item-label">Minutos</div>
 								</div>
 							</div>
 							<!-- Meta / End -->
@@ -68,7 +82,7 @@
 							<ul class="room-details">
 								<li class="room-details__item">
 									<i class="fas fa-phone"></i>
-										+1 800 900 1248
+										+34 800 900 124
 								</li>
 								<li class="room-details__item">
 									<i class="fas fa-envelope"></i>
@@ -76,7 +90,7 @@
 								</li>
 								<li class="room-details__item">
 									<i class="fab fa-instagram"></i>
-									<a href="https://www.instagram.com">escapium</a>
+									<a href="https://www.instagram.com">The Escape room</a>
 								</li>
 								<li class="room-details__item">
 									<i class="fas fa-map-marker-alt"></i>
@@ -85,7 +99,7 @@
 							</ul>
 							<!-- Room Details / End -->
 		
-							<a href="#" class="btn btn-primary btn-lg">Book Now!</a>
+							<a href="#" class="btn btn-primary btn-lg">¡Reserva ahora!</a>
 		
 						</div>
 					</div>
@@ -100,7 +114,7 @@
 		<div class="section-content">
 			<div class="container">
 		
-				<h2>Other Rooms</h2>
+				<h2>Otras salas</h2>
 		
 				<!-- Rooms Grid - 3 cols -->
 				<div class="row rooms rooms--grid js-rooms-related slick--arrows-top">

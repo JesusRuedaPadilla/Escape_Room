@@ -57,22 +57,22 @@
 				<a href="/usuario-index"><img src="assets/img/BB91cd243078ae9e1b5c0332ab9e84449c.png" srcset="assets/img/logo@2x.png 2x" alt="Escapium"></a>
 			</div>
 			<!-- Logo - Image Based / End -->
-		
+		{% block b %}
 			<!-- Main Navigation -->
-			<nav class="main-nav">
+			{# <nav class="main-nav">
 				<ul class="main-nav__list">
-					<li class="active"><a href="/usuario-index">Inicio</a></li>
+					<li class=""><a href="/usuario-index">Inicio</a></li>
 				
 					<li class=""><a href="/usr-salas">Salas</a>
 					</li>
 					<li class=""><a href="/usr-about">Acerca de</a></li>
 					<li><a href="/usr-contacto">Contáctanos</a></li>
-					<li class=""><a href="/usr-precios">Pricing Tables <span class="badge badge-danger">New</span></a></li>
+					<li class=""><a href="/usr-precios">Pricing Tables <span class="badge badge-danger">Novedad</span></a></li>
 				</ul>
 		
-			</nav>
+			</nav> #}
 			<!-- Main Navigation / End -->
-		
+		{% endblock %}	
 			<div class="header__spacer"></div>
 		
 			<!-- Secondary Navigation -->
@@ -95,7 +95,9 @@
 					<!-- Account -->
 					<li class="nav-secondary__login">
 						<a href="/profile">
+						
 							<i class="icon-user"></i>
+						
 							<span class="link-label"></span>
 						</a>
 					</li>
